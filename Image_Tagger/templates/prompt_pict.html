@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="myscripts.js"></script>
+		
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+      <script type="text/javascript">
+          function functionTest(object_tag)
+          {
+          	 var type_of_request = 'http://127.0.0.1:5000/get_data/' + object_tag
+          	// alert(type_of_request);
+
+            $.get(   type_of_request , 
+            	     function( data ) { 
+            	     //alert(data); 
+            	     $("#image_data_set").attr("src", data ) }
+            	     );
+
+   
+          }
+        </script>
+	</script>
+	</head>
+	<body>
+		<div style="width:500px; margin:0 auto;">
+			<h1 style="color: #5e9ca0;">
+				<img id="image_data_set" src="{{ picture_shown }}" alt="" width="400" height="337" />
+			</h1>
+			<table  width="400">
+				<tbody>
+					<tr style="height:10px;">
+						<td style="text-align: left;">
+							<div>
+								<button id="tag_1" onclick="functionTest('tag_1')"  style="width:180px;height:80px;" type="submit"> Plastic  </button>
+							</div>
+						</td>
+						<td style="text-align: right;">
+							<div>
+								<button id="tag_2" onclick="functionTest('tag_2')" style="width:180px;height:80px;" type="submit"> Paper </button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: left;">
+							<div>
+								<button id="tag_3" onclick="functionTest('tag_3')" style="width:180px;height:80px;" type="submit"> Bottle </button>
+							</div>
+						</td>
+						<td style="text-align: right;">
+							<div>
+								<button  id="tag_4" onclick="functionTest('tag_4')" style="width:180px;height:80px;" type="submit"> Colour Paper </button>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</div>
+		</body>
+
+	</html>
