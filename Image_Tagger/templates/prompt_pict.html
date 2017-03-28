@@ -5,9 +5,9 @@
 		
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
       <script type="text/javascript">
-          function functionTest(object_tag)
+          function functionTest(trash_object)
           {
-          	 var type_of_request = 'http://127.0.0.1:5000/get_data/' + object_tag
+          	 var type_of_request = 'http://127.0.0.1:5000/get_data/' + trash_object
           	// alert(type_of_request);
 
             $.get(   type_of_request , 
@@ -22,38 +22,55 @@
 	</script>
 	</head>
 	<body>
-		<div style="width:500px; margin:0 auto;">
+	<div id="contentBox" style="margin:0px auto; width:100%">
+		<!-- <div style="width:500px; margin:0 auto;"> -->
+		    <div id="column1" style="float:left; margin:0; width:30%;">
+             CONTENT
+            </div>
+		
+
+
+            <div id="column2" style="float:left; margin:0;width:39%;">
 			<h1 style="color: #5e9ca0;">
-				<img id="image_data_set" src="{{ picture_shown }}" alt="" width="400" height="337" />
+				<img id="image_data_set" src="{{ picture_shown }}" alt="" width="330" height="317" />
 			</h1>
-			<table  width="400">
+			<div>
+			<table  width="330">
 				<tbody>
 					<tr style="height:10px;">
 						<td style="text-align: left;">
 							<div>
-								<button id="tag_1" onclick="functionTest('tag_1')"  style="width:180px;height:80px;" type="submit"> Plastic  </button>
+								<button id="plastic" onclick="functionTest('cat')"  style="width:130px;height:80px;" type="submit"> Plastic  </button>
 							</div>
 						</td>
 						<td style="text-align: right;">
 							<div>
-								<button id="tag_2" onclick="functionTest('tag_2')" style="width:180px;height:80px;" type="submit"> Paper </button>
+								<button id="paper" onclick="functionTest('dog')" style="width:130px;height:80px;" type="submit"> Paper </button>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td style="text-align: left;">
 							<div>
-								<button id="tag_3" onclick="functionTest('tag_3')" style="width:180px;height:80px;" type="submit"> Bottle </button>
+								<button id="bottle" onclick="functionTest('kitten')" style="width:130px;height:80px;" type="submit"> Bottle </button>
 							</div>
 						</td>
 						<td style="text-align: right;">
 							<div>
-								<button  id="tag_4" onclick="functionTest('tag_4')" style="width:180px;height:80px;" type="submit"> Colour Paper </button>
+								<button  id="color_paper" onclick="functionTest('puppy')" style="width:130px;height:80px;" type="submit"> Colour Paper </button>
 							</div>
 						</td>
 					</tr>
 				</tbody>
+				</table>
 			</div>
+
+
+			    </div>
+
+ 			    <div id="column3" style="float:right; margin:0;width:30%">
+     			CONTENT
+    			</div>
 		</body>
 
 	</html>
