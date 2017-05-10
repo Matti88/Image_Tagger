@@ -12,4 +12,4 @@ flask
 
 ## SCREENSHOT
 
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt text](https://raw.githubusercontent.com/Matti88/Image_Tagger/master/Image_Tagger/static/Selection_009.png)
